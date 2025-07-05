@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 
 // Your deployed contract address
-export const CONTRACT_ADDRESS = '0x3DE93A310c4626Da956eA074846EA587cB10e27f';
+export const CONTRACT_ADDRESS = '0x4e7D8B73a95818cE1C2954eaC231e46B508E981A';
 
 // Your questions IPFS hash - can be overridden by environment variable
 export const QUESTIONS_IPFS_HASH = import.meta.env.VITE_QUESTIONS_IPFS_HASH || 'bafkreign6k76liptbhl3vhzyapl2pccb5lw73cix3rdvxymdghoxzagh7u';

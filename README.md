@@ -11,8 +11,8 @@ Welcome to the Web3 version of the classic Carmen Sandiego detective game! Playe
 ## 🎯 Live Demo
 
 - **Game**: [Play Carmen Sandiego Web3](your-deployed-frontend-url)
-- **Smart Contract**: [View on BaseScan](https://sepolia.basescan.org/address/0x3DE93A310c4626Da956eA074846EA587cB10e27f#code)
-- **Contract Address**: `0x3DE93A310c4626Da956eA074846EA587cB10e27f`
+- **Smart Contract**: [View on BaseScan](https://sepolia.basescan.org/address/0x4e7D8B73a95818cE1C2954eaC231e46B508E981A#code)
+- **Contract Address**: `0x4e7D8B73a95818cE1C2954eaC231e46B508E981A`
 
 ## 🏗 Architecture
 
@@ -209,8 +209,8 @@ The app automatically falls back to public gateways if local IPFS fails.
 ## 🔗 Contract Addresses
 
 ### Base Sepolia Testnet ✅ (Currently Deployed)
-- **Contract**: `0x3DE93A310c4626Da956eA074846EA587cB10e27f`
-- **Explorer**: [View on BaseScan](https://sepolia.basescan.org/address/0x3DE93A310c4626Da956eA074846EA587cB10e27f#code)
+- **Contract**: `0x4e7D8B73a95818cE1C2954eaC231e46B508E981A`
+- **Explorer**: [View on BaseScan](https://sepolia.basescan.org/address/0x4e7D8B73a95818cE1C2954eaC231e46B508E981A#code)
 - **Network**: Base Sepolia (Chain ID: 84532)
 
 ### Base Mainnet 🚧 (Coming Soon)
