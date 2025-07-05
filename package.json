@@ -1,0 +1,21 @@
+{
+  "name": "carmen-sandiego-web3",
+  "version": "1.0.0",
+  "description": "> A blockchain-based Carmen Sandiego game built on Base with data indexing powered by The Graph",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.14",
+    "@openzeppelin/contracts": "^5.3.0",
+    "hardhat": "^2.24.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}

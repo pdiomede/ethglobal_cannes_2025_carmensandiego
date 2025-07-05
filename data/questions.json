@@ -1,0 +1,246 @@
+{
+  "version": "1.0",
+  "totalQuestions": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Carmen was spotted near a famous tower that leans at 3.97 degrees. Which city?",
+      "options": ["Paris", "Pisa", "London", "Rome"],
+      "correctAnswer": 1,
+      "difficulty": "easy",
+      "region": "Europe"
+    },
+    {
+      "id": 2,
+      "question": "She left behind a postcard from the 'City of Eternal Spring' at 8,660 feet elevation. Where?",
+      "options": ["Miami", "Medellín", "Barcelona", "Quito"],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "region": "South America"
+    },
+    {
+      "id": 3,
+      "question": "Carmen was seen boarding a boat to the island where the Statue of Liberty's designer also built a famous tower. Which city?",
+      "options": ["New York", "Paris", "London", "Tokyo"],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "region": "Europe"
+    },
+    {
+      "id": 4,
+      "question": "Witnesses saw her eating sushi at 5 AM in the world's largest fish market. Which city?",
+      "options": ["Seoul", "Tokyo", "Hong Kong", "Singapore"],
+      "correctAnswer": 1,
+      "difficulty": "easy",
+      "region": "Asia"
+    },
+    {
+      "id": 5,
+      "question": "Carmen dropped a receipt from a coffee shop in the city where coffee culture began in the 15th century. Where?",
+      "options": ["Vienna", "Istanbul", "Rome", "Athens"],
+      "correctAnswer": 1,
+      "difficulty": "hard",
+      "region": "Europe"
+    },
+    {
+      "id": 6,
+      "question": "She was photographed near the world's largest pyramid by volume. Which city is closest?",
+      "options": ["Cairo", "Mexico City", "Puebla", "Guatemala City"],
+      "correctAnswer": 2,
+      "difficulty": "hard",
+      "region": "North America"
+    },
+    {
+      "id": 7,
+      "question": "Carmen left a trail in the city where the Beatles played their last concert. Where?",
+      "options": ["Liverpool", "London", "San Francisco", "Hamburg"],
+      "correctAnswer": 2,
+      "difficulty": "medium",
+      "region": "North America"
+    },
+    {
+      "id": 8,
+      "question": "She was seen in the capital city that's home to the world's oldest university. Which city?",
+      "options": ["Oxford", "Cambridge", "Fez", "Bologna"],
+      "correctAnswer": 2,
+      "difficulty": "hard",
+      "region": "Africa"
+    },
+    {
+      "id": 9,
+      "question": "Carmen visited the city where the first modern Olympics were held. Where?",
+      "options": ["Paris", "Athens", "London", "Los Angeles"],
+      "correctAnswer": 1,
+      "difficulty": "easy",
+      "region": "Europe"
+    },
+    {
+      "id": 10,
+      "question": "She was spotted in the city known as the 'Pearl of the Orient' that was once a British colony. Where?",
+      "options": ["Singapore", "Hong Kong", "Mumbai", "Shanghai"],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "region": "Asia"
+    },
+    {
+      "id": 11,
+      "question": "Carmen left clues in the city where Carnival was invented and is below sea level. Where?",
+      "options": ["Rio de Janeiro", "Venice", "New Orleans", "Port of Spain"],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "region": "Europe"
+    },
+    {
+      "id": 12,
+      "question": "She was seen near the largest mosque in the world by area. Which city?",
+      "options": ["Mecca", "Istanbul", "Casablanca", "Dubai"],
+      "correctAnswer": 2,
+      "difficulty": "hard",
+      "region": "Africa"
+    },
+    {
+      "id": 13,
+      "question": "Carmen dropped a metro ticket from the city with the world's oldest underground railway. Where?",
+      "options": ["Paris", "New York", "London", "Berlin"],
+      "correctAnswer": 2,
+      "difficulty": "medium",
+      "region": "Europe"
+    },
+    {
+      "id": 14,
+      "question": "She was photographed in the city where tango was born. Which city?",
+      "options": ["Montevideo", "Buenos Aires", "Santiago", "São Paulo"],
+      "correctAnswer": 1,
+      "difficulty": "easy",
+      "region": "South America"
+    },
+    {
+      "id": 15,
+      "question": "Carmen visited the city that's home to the world's largest palace complex. Where?",
+      "options": ["Versailles", "Beijing", "St. Petersburg", "Vienna"],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "region": "Asia"
+    },
+    {
+      "id": 16,
+      "question": "She left a receipt from the city where the Nobel Prize ceremony is held. Which city?",
+      "options": ["Oslo", "Stockholm", "Copenhagen", "Helsinki"],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "region": "Europe"
+    },
+    {
+      "id": 17,
+      "question": "Carmen was seen in the city that never sleeps, where the ball drops on New Year's Eve. Where?",
+      "options": ["Las Vegas", "New York", "Los Angeles", "Miami"],
+      "correctAnswer": 1,
+      "difficulty": "easy",
+      "region": "North America"
+    },
+    {
+      "id": 18,
+      "question": "She visited the city where the largest wine festival in the world takes place. Which city?",
+      "options": ["Bordeaux", "Stuttgart", "Mendoza", "Napa"],
+      "correctAnswer": 1,
+      "difficulty": "hard",
+      "region": "Europe"
+    },
+    {
+      "id": 19,
+      "question": "Carmen was spotted in the city with the world's busiest airport by passenger traffic. Where?",
+      "options": ["London", "Dubai", "Atlanta", "Tokyo"],
+      "correctAnswer": 2,
+      "difficulty": "medium",
+      "region": "North America"
+    },
+    {
+      "id": 20,
+      "question": "She left clues in the city where the ancient Colosseum still stands. Which city?",
+      "options": ["Athens", "Rome", "Istanbul", "Cairo"],
+      "correctAnswer": 1,
+      "difficulty": "easy",
+      "region": "Europe"
+    },
+    {
+      "id": 21,
+      "question": "Carmen was seen in the city known as the 'City of a Hundred Spires'. Where?",
+      "options": ["Vienna", "Prague", "Budapest", "Krakow"],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "region": "Europe"
+    },
+    {
+      "id": 22,
+      "question": "She visited the city where the world's largest carnival takes place before Lent. Which city?",
+      "options": ["New Orleans", "Rio de Janeiro", "Trinidad", "Cologne"],
+      "correctAnswer": 1,
+      "difficulty": "easy",
+      "region": "South America"
+    },
+    {
+      "id": 23,
+      "question": "Carmen left evidence in the city where the Space Needle was built for the 1962 World's Fair. Where?",
+      "options": ["Portland", "Seattle", "Vancouver", "San Francisco"],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "region": "North America"
+    },
+    {
+      "id": 24,
+      "question": "She was photographed near the world's largest sand dunes that meet the ocean. Which city is closest?",
+      "options": ["Dubai", "Casablanca", "Swakopmund", "Perth"],
+      "correctAnswer": 2,
+      "difficulty": "hard",
+      "region": "Africa"
+    },
+    {
+      "id": 25,
+      "question": "Carmen visited the city where the largest jazz festival in the world happens annually. Where?",
+      "options": ["New Orleans", "Montreal", "Montreux", "Chicago"],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "region": "North America"
+    },
+    {
+      "id": 26,
+      "question": "She was seen in the city that's home to the world's largest indoor market. Which city?",
+      "options": ["Istanbul", "Tehran", "Mumbai", "Bangkok"],
+      "correctAnswer": 0,
+      "difficulty": "hard",
+      "region": "Europe"
+    },
+    {
+      "id": 27,
+      "question": "Carmen left a clue in the city where the first Starbucks opened. Where?",
+      "options": ["Portland", "Seattle", "San Francisco", "Vancouver"],
+      "correctAnswer": 1,
+      "difficulty": "easy",
+      "region": "North America"
+    },
+    {
+      "id": 28,
+      "question": "She visited the city known as the 'Detroit of the South' for its automotive industry. Which city?",
+      "options": ["Atlanta", "Charlotte", "Nashville", "Birmingham"],
+      "correctAnswer": 0,
+      "difficulty": "hard",
+      "region": "North America"
+    },
+    {
+      "id": 29,
+      "question": "Carmen was spotted in the city where the largest opera house in the world is located. Where?",
+      "options": ["Vienna", "Milan", "Sydney", "Paris"],
+      "correctAnswer": 2,
+      "difficulty": "medium",
+      "region": "Australia"
+    },
+    {
+      "id": 30,
+      "question": "She left evidence in Silicon Valley's largest city. Which city?",
+      "options": ["Palo Alto", "San Jose", "Mountain View", "Cupertino"],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "region": "North America"
+    }
+  ]
+}
