@@ -130,8 +130,12 @@ contract CarmenSandiegoGame {
         
         game.currentQuestion++;
         
-        // Check if game is complete
-        if (game.currentQuestion == QUESTIONS_PER_GAME) {
+        // Classic Carmen Sandiego behavior: End game immediately on wrong answer
+        if (!isCorrect) {
+            _endGame(msg.sender);
+        }
+        // Or end game if all questions answered correctly
+        else if (game.currentQuestion == QUESTIONS_PER_GAME) {
             _endGame(msg.sender);
         }
     }

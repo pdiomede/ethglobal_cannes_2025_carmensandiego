@@ -523,49 +523,51 @@ const CarmenGame = () => {
       
       console.log(`Question ${gameState.currentQuestion + 1}: ${isCorrect ? 'CORRECT' : 'WRONG'}`);
       
-      // Submit answer to blockchain
-      const tx = await contract.submitAnswer(answerIndex);
+      // Submit answer to blockchain - let the contract handle game end logic
+      const tx = await contract.submitAnswer(answerIndex, currentQ.correctAnswer);
       await tx.wait();
       
-      // Play appropriate sound
+      // Play appropriate sound effect
       if (isCorrect) {
         playSuccessSound();
       } else {
         playFailSound();
-        
-        // Wrong answer - game over
-        setGameState(prev => ({
-          ...prev,
-          gameOver: true,
-          wrongAnswer: true,
-          lastAnswerCorrect: false,
-          carmenCaught: false
-        }));
-        
-        stopBackgroundMusic();
-        setLoading(false);
-        return;
       }
       
-      // Check if this was the last question
-      if (gameState.currentQuestion === 9) {
-        // All questions answered correctly - Carmen caught!
+      // Get updated game state from contract
+      const wallet = wallets[0];
+      const provider = await wallet.getEthereumProvider();
+      const ethersProvider = new ethers.BrowserProvider(provider);
+      const signer = await ethersProvider.getSigner();
+      const playerAddress = await signer.getAddress();
+      
+      // Check if game is still active after answer submission
+      const hasActive = await contract.hasActiveGame(playerAddress);
+      
+      if (!hasActive) {
+        // Game ended - load final game state
+        const gameData = await contract.getGameState(playerAddress);
+        const finalScore = Number(gameData.correctCount || gameData[4]);
+        const carmenCaught = gameData.carmenCaught || gameData[5];
+        
         setGameState(prev => ({
           ...prev,
-          score: prev.score + 1,
+          isActive: false,
+          score: finalScore,
           gameOver: true,
-          carmenCaught: true,
-          lastAnswerCorrect: true
+          carmenCaught: carmenCaught,
+          wrongAnswer: !isCorrect,
+          lastAnswerCorrect: isCorrect
         }));
         
         stopBackgroundMusic();
       } else {
-        // Move to next question
+        // Game continues - move to next question
         setGameState(prev => ({
           ...prev,
           currentQuestion: prev.currentQuestion + 1,
-          score: prev.score + 1,
-          lastAnswerCorrect: true
+          score: prev.score + (isCorrect ? 1 : 0),
+          lastAnswerCorrect: isCorrect
         }));
       }
       
@@ -578,17 +580,11 @@ const CarmenGame = () => {
   };
 
   const resetGame = async () => {
-    if (!contract || !authenticated || !wallets || wallets.length === 0) return;
-    
     try {
       setLoading(true);
       setError('');
       
-      // Reset game on blockchain
-      const tx = await contract.resetGame();
-      await tx.wait();
-      
-      // Reset local state
+      // Reset local state - no need to call contract since game is already ended
       setGameState({
         isActive: false,
         currentQuestion: 0,
@@ -601,6 +597,8 @@ const CarmenGame = () => {
       });
       
       stopBackgroundMusic();
+      
+      console.log('🔄 Game state reset - ready for new game');
       
     } catch (error) {
       console.error('Error resetting game:', error);
