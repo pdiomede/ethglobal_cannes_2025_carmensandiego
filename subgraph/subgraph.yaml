@@ -1,0 +1,33 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: CarmenSandiegoGame
+    network: base-sepolia
+    source:
+      address: "0x4e7D8B73a95818cE1C2954eaC231e46B508E981A"
+      abi: CarmenSandiegoGame
+      startBlock: 18500000
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Game
+        - Player
+        - Answer
+        - GlobalStats
+      abis:
+        - name: CarmenSandiegoGame
+          file: ./abis/CarmenSandiegoGame.json
+      eventHandlers:
+        - event: GameStarted(indexed address,uint256,uint256[10],uint256)
+          handler: handleGameStarted
+        - event: AnswerSubmitted(indexed address,uint256,uint256,uint256,bool,uint256)
+          handler: handleAnswerSubmitted
+        - event: GameCompleted(indexed address,uint256,bool,uint256,uint256)
+          handler: handleGameCompleted
+        - event: CarmenEscaped(indexed address,uint256,uint256,uint256)
+          handler: handleCarmenEscaped
+      file: ./src/mapping.ts 

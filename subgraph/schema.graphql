@@ -1,0 +1,92 @@
+type GlobalStats @entity(immutable: false) {
+  id: ID!
+  totalGames: BigInt!
+  totalPlayers: BigInt!
+  totalCarmenCaught: BigInt!
+  totalCarmenEscaped: BigInt!
+  globalWinRate: BigDecimal!
+  lastUpdated: BigInt!
+}
+
+type Player @entity(immutable: false) {
+  id: ID! # player address
+  address: Bytes!
+  gamesPlayed: BigInt!
+  gamesWon: BigInt!
+  gamesLost: BigInt!
+  winRate: BigDecimal!
+  totalScore: BigInt!
+  averageScore: BigDecimal!
+  bestScore: BigInt!
+  longestWinStreak: BigInt!
+  currentWinStreak: BigInt!
+  firstGameAt: BigInt!
+  lastGameAt: BigInt!
+  games: [Game!]! @derivedFrom(field: "player")
+}
+
+type Game @entity(immutable: false) {
+  id: ID! # gameId
+  gameId: BigInt!
+  player: Player!
+  questionIds: [BigInt!]!
+  status: GameStatus!
+  score: BigInt!
+  carmenCaught: Boolean!
+  startTime: BigInt!
+  endTime: BigInt
+  duration: BigInt
+  answers: [Answer!]! @derivedFrom(field: "game")
+  totalAnswers: BigInt!
+  correctAnswers: BigInt!
+  wrongAnswers: BigInt!
+}
+
+type Answer @entity(immutable: true) {
+  id: ID! # gameId-questionIndex
+  game: Game!
+  questionIndex: BigInt!
+  questionId: BigInt!
+  playerAnswer: BigInt!
+  isCorrect: Boolean!
+  timestamp: BigInt!
+  timeFromStart: BigInt!
+}
+
+enum GameStatus {
+  ACTIVE
+  COMPLETED_WIN
+  COMPLETED_LOSS
+}
+
+type DailyStats @entity(immutable: false) {
+  id: ID! # date in format YYYY-MM-DD
+  date: String!
+  gamesPlayed: BigInt!
+  gamesWon: BigInt!
+  gamesLost: BigInt!
+  uniquePlayers: BigInt!
+  totalScore: BigInt!
+  averageScore: BigDecimal!
+}
+
+type QuestionStats @entity(immutable: false) {
+  id: ID! # questionId
+  questionId: BigInt!
+  timesAsked: BigInt!
+  timesAnsweredCorrectly: BigInt!
+  timesAnsweredWrong: BigInt!
+  correctRate: BigDecimal!
+  averageAnswerTime: BigDecimal!
+}
+
+type LeaderboardEntry @entity(immutable: false) {
+  id: ID! # player address
+  player: Player!
+  rank: BigInt!
+  winRate: BigDecimal!
+  gamesPlayed: BigInt!
+  gamesWon: BigInt!
+  totalScore: BigInt!
+  lastUpdated: BigInt!
+} 

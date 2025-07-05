@@ -1,0 +1,25 @@
+{
+  "name": "carmen-sandiego-subgraph",
+  "version": "1.0.0",
+  "description": "Subgraph for Carmen Sandiego Web3 Detective Game",
+  "main": "index.js",
+  "scripts": {
+    "build": "graph build",
+    "codegen": "graph codegen",
+    "deploy": "graph deploy --studio carmen-sandiego-web3",
+    "create-local": "graph create --node http://localhost:8020/ carmen-sandiego-web3",
+    "remove-local": "graph remove --node http://localhost:8020/ carmen-sandiego-web3",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 carmen-sandiego-web3",
+    "test": "graph test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/carmen-sandiego-web3"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.63.0",
+    "@graphprotocol/graph-ts": "^0.31.0"
+  }
+} 
